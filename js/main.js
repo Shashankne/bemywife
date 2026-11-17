@@ -127,9 +127,28 @@ function initYesButton() {
   });
 }
 
+function initCarousel() {
+  const carouselEl = document.getElementById('loveCarousel');
+  if (!carouselEl || typeof bootstrap === 'undefined') return;
+
+  const instance = bootstrap.Carousel.getInstance(carouselEl);
+  if (instance) {
+    instance.dispose();
+  }
+
+  new bootstrap.Carousel(carouselEl, {
+    interval: 5000,
+    ride: 'carousel',
+    pause: false,
+    wrap: true,
+    touch: true,
+  });
+}
+
 async function init() {
   await loadComponent('#proposal-card', 'components/wife-card.html');
 
+  initCarousel();
   makeNoButtonJuggle();
   initYesButton();
 
