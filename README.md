@@ -1,47 +1,47 @@
-# Apology Website
+# Be My Wife
 
-This project is a heartfelt apology website designed to express commitment and seek support in a relationship. It utilizes HTML, CSS, and JavaScript to create an engaging and emotional experience.
+This project is a romantic proposal website made to say "I love you" and invite the love of my life to become my wife.
 
 ## Project Structure
 
 ```
-apology-website
-├── src
-│   ├── index.html          # Main HTML file
-│   ├── css
-│   │   └── styles.css      # Styles for the website
-│   ├── js
-│   │   └── main.js         # JavaScript for interactive features
-│   ├── components
-│   │   ├── header.html     # Header section of the website
-│   │   └── apology-card.html # Apology card structure
-│   └── data
-│       └── messages.json   # JSON data for messages and quotes
-├── .gitignore              # Files to ignore in version control
-├── package.json            # npm configuration file
-└── README.md               # Project documentation
+bemywife
+├── index.html
+├── css/
+│   └── styles.css
+├── js/
+│   └── main.js
+├── components/
+│   ├── header.html
+│   └── wife-card.html
+├── data/
+│   └── messages.json
+├── images/
+├── package.json
+├── README.md
+└── .gitignore
 ```
 
 ## Getting Started
 
-1. **Clone the repository:**
-   ```
-   git clone <repository-url>
-   ```
+1. Clone the repository.
+2. Open the project folder in a local web server.
+3. Visit `http://localhost:8000` in the browser.
 
-2. **Navigate to the project directory:**
-   ```
-   cd apology-website
-   ```
+## Run locally
 
-3. **Open the `src/index.html` file in your web browser to view the website.**
+```bash
+npm install
+npm start
+```
 
 ## Technologies Used
 
 - HTML
 - CSS
 - JavaScript
+- Bootstrap
 
-## Acknowledgments
+## Love note
 
-This project is dedicated to expressing sincere apologies and the desire to improve relationships. Your support means everything.
+I love you, and I want to spend forever with you.

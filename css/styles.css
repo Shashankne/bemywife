@@ -1,268 +1,315 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(180deg, #fff8fb 0%, #ffe8f0 100%);
+  color: #3f2433;
 }
 
-header {
-    background-color: #ff6f61;
-    color: white;
-    padding: 20px;
-    text-align: center;
+#app {
+  min-height: 100vh;
 }
 
-h1 {
-    margin: 0;
-    font-size: 2.5em;
+.site-header {
+  background: linear-gradient(135deg, #ff89b0 0%, #ff5d8a 100%);
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px 18px;
+  box-shadow: 0 10px 25px rgba(255, 93, 138, 0.18);
 }
 
-.apology-card {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    max-width: 600px;
-    padding: 20px;
-    text-align: center;
+.eyebrow {
+  margin: 0;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 11px;
+  opacity: 0.9;
 }
 
-.apology-card h2 {
-    color: #ff6f61;
+.site-header h1 {
+  margin: 10px 0 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
 }
 
-.apology-card p {
-    font-size: 1.2em;
-    line-height: 1.5;
-}
-
-button {
-    background-color: #ff6f61;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-    font-size: 1em;
-    padding: 10px 20px;
-    margin-top: 20px;
-}
-
-/* Romantic card styles */
 .romantic-card {
   max-width: 760px;
-  margin: 56px auto;
-  padding: 36px;
-  border-radius: 20px;
-  background: linear-gradient(135deg, rgba(255,240,245,0.95), rgba(255,250,240,0.95));
-  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  margin: 42px auto 64px;
+  padding: 34px 28px 28px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 244, 248, 0.96));
+  box-shadow: 0 18px 45px rgba(153, 60, 94, 0.14);
   position: relative;
   overflow: hidden;
-  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  color: #3b2a39;
 }
 
 .hearts {
   position: absolute;
-  top: 15px;
-  right: 16px;
-  font-size: 20px;
-  opacity: 0.18;
-  transform: rotate(-10deg);
+  top: 18px;
+  right: 22px;
+  font-size: 23px;
+  opacity: 0.22;
+  transform: rotate(-8deg);
 }
+
 .heart {
-  display:inline-block;
+  display: inline-block;
   margin-left: 6px;
-  color: #ff4d7e;
+  color: #ff5c8d;
   animation: float 4s ease-in-out infinite;
 }
-.heart:nth-child(2){ animation-delay: .6s }
-.heart:nth-child(3){ animation-delay: 1.2s }
+
+.heart:nth-child(2) { animation-delay: 0.6s; }
+.heart:nth-child(3) { animation-delay: 1.2s; }
 
 @keyframes float {
-  0% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-8px) scale(1.05); }
-  100% { transform: translateY(0) scale(1); }
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-8px) scale(1.08); }
 }
 
-.card-content { text-align: center; padding: 8px 18px; }
-.sorry-title { font-size: 34px; margin: 6px 0 8px; color:#7a2747; }
-.sorry-text { font-size: 16px; line-height: 1.5; margin-bottom: 20px; color:#5a3d49; }
-
-.propose { margin-top: 20px; text-align: center; }
-
-.forever {
-  font-size: 22px;
-  font-weight: 600;
-  margin: 6px 0 4px;
-  /* gradient text for a softer romantic look */
-  background: linear-gradient(90deg, #ff7ba0 0%, #ff4d7e 60%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  letter-spacing: 0.2px;
+.card-content {
+  text-align: center;
+  padding: 10px 8px 0;
 }
 
-/* small supportive line under the main question */
-.forever-sub {
-  font-size: 13px;
-  color: #5a3d49;
-  opacity: 0.95;
-  margin-bottom: 12px;
+.small-tag {
+  margin: 0 0 8px;
+  color: #a04a6a;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 11px;
+  font-weight: 700;
 }
 
-/* subtle heart that pulses once on load */
-.forever::after{
-  content: " ❤";
-  color: #ff4d7e;
-  display: inline-block;
-  transform-origin: center;
-  animation: heartPop 900ms ease 1;
-}
-@keyframes heartPop {
-  0%   { transform: scale(.6); opacity: 0; }
-  40%  { transform: scale(1.15); opacity: 1; }
-  100% { transform: scale(1); opacity: 1; }
+.proposal-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: #7b244a;
+  margin: 0 0 18px;
+  font-weight: 700;
 }
 
-/* Ensure bootstrap carousel slides show centered content instead of stacking */
+.proposal-text {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: #5b3c49;
+  margin: 0;
+}
+
+.slider-container {
+  margin-top: 18px;
+}
+
 .slider-container .carousel-inner {
-  min-height: 180px; /* adjust to fit your content */
+  min-height: 200px;
 }
 
 .slider-container .carousel-item {
-  display: none;               /* hide non-active slides */
-  justify-content: center;
+  display: none;
   align-items: center;
-  padding: 12px 18px;
-  flex-direction: column;
+  justify-content: center;
+  padding: 12px 20px;
   text-align: center;
 }
 
 .slider-container .carousel-item.active {
-  display: flex;               /* show active slide as flex for centering */
+  display: flex;
 }
 
 .sad-emoji {
-  width: 140px;
+  width: 120px;
   height: auto;
   margin-bottom: 14px;
   display: block;
-
-  /* soft rounded frame */
-  border-radius: 16px;
+  border-radius: 18px;
   padding: 8px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,240,245,0.75));
-  border: 6px solid rgba(255,250,250,0.6);
-
-  /* gentle shadow and depth */
-  box-shadow: 0 12px 30px rgba(183,47,88,0.10), inset 0 -3px 8px rgba(255,255,255,0.6);
-
-  transition: transform .36s cubic-bezier(.2,.9,.3,1), box-shadow .36s ease, filter .36s ease;
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,243,248,0.8));
+  border: 5px solid rgba(255,255,255,0.7);
+  box-shadow: 0 12px 30px rgba(183, 47, 88, 0.08);
 }
 
-/* slight lift and glow on hover/focus to feel tactile */
-.inner-slide:hover .sad-emoji,
-.sad-emoji:focus {
-  transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 22px 46px rgba(183,47,88,0.16), inset 0 -2px 6px rgba(255,255,255,0.65);
-  filter: saturate(1.05) contrast(1.02);
+.propose {
+  margin-top: 24px;
 }
 
-/* Enhanced button styles */
+.forever {
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  font-weight: 700;
+  color: transparent;
+  background: linear-gradient(90deg, #ff7a9c 0%, #ff4d7e 60%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin: 0 0 8px;
+}
+
+.forever-sub {
+  margin: 0 0 18px;
+  color: #6a4b58;
+  font-size: 0.96rem;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 24px auto 6px;
+  flex-wrap: wrap;
+}
+
+.hover-reveal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 0;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(6px);
+  transition: max-height 0.35s ease, opacity 0.25s ease, transform 0.25s ease, margin 0.25s ease;
+}
+
+.choices:hover ~ .hover-reveal,
+.choices:focus-within ~ .hover-reveal,
+.choices:active ~ .hover-reveal,
+.hover-reveal.show,
+.hover-reveal:hover {
+  opacity: 1;
+  max-height: 90px;
+  min-height: 54px;
+  transform: translateY(0);
+  margin-top: 4px;
+}
+
+.hover-reveal-img {
+  width: 110px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(255, 93, 138, 0.16);
+  background: rgba(255,255,255,0.35);
+  padding: 6px;
+}
+
 .btn {
   font-weight: 700;
   border-radius: 999px;
-  padding: 0.6rem 1.1rem;
-  transition: transform .18s ease, box-shadow .18s ease, opacity .18s ease;
+  padding: 0.72rem 1.4rem;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Yes button (vibrant gradient pill) */
 .btn.yes {
   background: linear-gradient(90deg, #ff7ba0 0%, #ff4d7e 60%);
   color: #fff;
   border: none;
-  box-shadow: 0 10px 22px rgba(255,77,126,0.14), inset 0 -3px 0 rgba(0,0,0,0.06);
+  box-shadow: 0 12px 25px rgba(255, 93, 138, 0.2);
 }
+
 .btn.yes::after {
   content: " ❤";
   margin-left: 8px;
-  display: inline-block;
-  transform-origin: center;
-  transition: transform .25s ease;
-}
-.btn.yes:hover,
-.btn.yes:focus {
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 16px 34px rgba(255,77,126,0.20);
-  outline: none;
-}
-.btn.yes:active {
-  transform: translateY(0) scale(.99);
 }
 
-/* No button (soft outlined pill) */
+.btn.yes:hover,
+.btn.yes:focus {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 18px 32px rgba(255, 93, 138, 0.22);
+}
+
 .btn.no {
   background: linear-gradient(180deg, rgba(255,240,245,0.92), #fff0f3);
   color: #b72f58;
   border: 1px solid rgba(183,47,88,0.12);
-  box-shadow: 0 6px 14px rgba(183,47,88,0.06);
+  box-shadow: 0 6px 14px rgba(183,47,88,0.08);
 }
+
 .btn.no:hover,
 .btn.no:focus {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 26px rgba(183,47,88,0.12);
+  transform: translateY(-2px);
 }
 
-/* Keep no button side-by-side on initial load */
 .no.initial {
   position: static;
-  left: auto;
-  top: auto;
-  transform: none;
-  margin-left: 12px;
+  margin-left: 0;
 }
 
-/* visible focus ring for keyboard users */
-.btn:focus-visible {
-  outline: 3px solid rgba(255,77,126,0.18);
-  outline-offset: 4px;
+.promise-list {
+  list-style: none;
+  padding: 0;
+  margin: 24px auto 0;
+  max-width: 520px;
+  text-align: left;
+  color: #613d49;
+  background: rgba(255,255,255,0.5);
+  border-radius: 16px;
+  padding: 16px 18px;
 }
 
-/* micro animation for heart when yes is clicked (JS can toggle .clicked) */
-.btn.yes.clicked::after {
-  animation: heartBounce .6s ease;
-}
-@keyframes heartBounce {
-  0% { transform: scale(1); }
-  40% { transform: scale(1.35); }
-  100% { transform: scale(1); }
+.promise-list li {
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 12px;
+  line-height: 1.5;
 }
 
-/* small responsiveness */
-@media (max-width:480px){
-  .romantic-card { padding: 22px; margin: 24px; }
-  .sorry-title { font-size: 26px; }
-  .choices { max-width: 260px; height: 72px; }
-  .no { left: calc(50% + 40px); }
-  .btn { padding: 0.5rem 0.9rem; font-size: .95rem; }
-  .btn.yes::after { margin-left:6px; }
+.promise-list li::before {
+  content: "❤";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #ff4d7e;
+}
+
+.gentle-note {
+  margin-top: 16px;
+  color: #7c5463;
+  font-size: 0.92rem;
+  font-style: italic;
 }
 
 .yes-confirm {
-  margin-top: 14px;
-  font-size: 14px;
-  color: #3b2a39;
+  margin-top: 18px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #782a4c;
   opacity: 0;
-  transform: translateY(-6px);
-  transition: opacity .28s ease, transform .28s ease;
+  transform: translateY(-8px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
   pointer-events: none;
-  will-change: opacity, transform;
 }
+
 .yes-confirm.show {
   opacity: 1;
   transform: translateY(0);
-  pointer-events: auto;
+}
+
+@media (max-width: 520px) {
+  .romantic-card {
+    margin: 20px 12px 32px;
+    padding: 22px 14px 18px;
+  }
+
+  .choices {
+    gap: 10px;
+    margin-top: 18px;
+  }
+
+  .btn {
+    width: auto;
+    min-width: 140px;
+    flex: 1 1 140px;
+  }
+
+  .hover-reveal-img {
+    width: 90px;
+  }
+
+  .promise-list {
+    padding: 14px 14px 10px;
+  }
 }

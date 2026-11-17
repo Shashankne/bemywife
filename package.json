@@ -1,17 +1,18 @@
 {
-  "name": "apology-website",
+  "name": "bemywife",
   "version": "1.0.0",
-  "description": "A website to apologize and express commitment to improving a relationship.",
-  "main": "src/index.html",
+  "description": "A romantic website to invite the love of my life to be my wife.",
+  "main": "index.html",
   "scripts": {
-    "start": "live-server src"
+    "start": "live-server"
   },
   "keywords": [
-    "apology",
-    "relationship",
-    "commitment"
+    "romantic",
+    "proposal",
+    "wife",
+    "love"
   ],
-  "author": "Your Name",
+  "author": "Shashank",
   "license": "ISC",
   "dependencies": {
     "live-server": "^1.2.1"
